@@ -55,8 +55,8 @@ const PMultiplier = () => {
 
     return (
         <div>
-            <Container>
-                <Row>
+            <Container >
+                {/* <Row>
                     <Col>
                         <div className='buttons'>
                             <div>
@@ -74,7 +74,7 @@ const PMultiplier = () => {
 
                         </div>
                     </Col>
-                </Row>
+                </Row> */}
                 <div className='details'>
                     <ul style={{ textAlign: "left", cursor: "pointer" }}>
                         <li onClick={() => { GetData("Details") }} style={{ borderBottom: page == "Details" ? " 2px solid blue" : "none", color: page == "Details" ? " black" : "#00000082" }}> Details</li>
@@ -97,7 +97,7 @@ const PMultiplier = () => {
 
                         {value == "Corrosion" ?
 
-                            <Container>
+                            <Container  >
                                 <div style={{ color: "black" }}>                                Corrosion Details
                                 </div>
                                 <br />
@@ -127,8 +127,8 @@ const PMultiplier = () => {
                                 </Row>
 
                             </Container> :
-                            <Container>
-                                <Row>
+                            <Container >
+                                <Row >
                                     {solidlayer && solidlayer.map((data, i) => {
                                         return <>
                                             <Col sm={5} style={{ height: '50px' }} className="mb-3" controlId="exampleForm.ControlInput1">
@@ -139,13 +139,18 @@ const PMultiplier = () => {
                                     })}
                                 </Row>
                                 <Button variant='primary' onClick={(e) => { GetSoilLayer(e) }}>+Add Soil Layer</Button>
-                            </Container>
-                        }
-                        <div>
+                                <div>
                             <input type="file" className="mb-3" names="files[]" onChange={(e) => setFile(e.target.files[0])} controlId="exampleForm.ControlInput1" />
                             <Button variant='primary' type="submit" onClick={() => { GetFile() }}>Upload</Button>
                             <iframe src={file}>   </iframe>
                         </div>
+                            </Container>
+                        }
+                        {/* <div>
+                            <input type="file" className="mb-3" names="files[]" onChange={(e) => setFile(e.target.files[0])} controlId="exampleForm.ControlInput1" />
+                            <Button variant='primary' type="submit" onClick={() => { GetFile() }}>Upload</Button>
+                            <iframe src={file}>   </iframe>
+                        </div> */}
                     </div>
                 }
 
