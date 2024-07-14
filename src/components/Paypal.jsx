@@ -27,26 +27,11 @@ const Paypal = () => {
             <center style={{ width: "80%", marginLeft: "15%", marginTop: "-45%" }}>
                 <div className="main" style={{height:'200px'}}>
                     <div >
-                        {/* <div className="imgs">
-                            <div className="container-image">
-                                <img src="" alt="profile" />
-
-                            </div>
-
-
-                        </div> */}
+                       
                         <div>
                             <h2 style={{ color: "black" ,marginTop:"31%"}}>Payment</h2>
                             <br />
-                            {/* <div >
-                                <Form.Group>
-                                    <Form.Control type="text" placeholder='Name' onChange={(e) => { setName(e.target.value) }} />
-                                </Form.Group>
-                            </div><br />
-                            <div ><Form.Group>
-                                <Form.Control type="number" placeholder='Amount' onChange={(e) => { setAmount(e.target.value)}} />
-                            </Form.Group>
-                            </div> */}
+                           
                             <div >
                                 <button className="login-button" style={{width:"auto"}}onClick={(e) => { Handilesubmit() }}>Pay with Paypal</button>
                             </div>
